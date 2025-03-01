@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -18,7 +19,9 @@ class _MainScreenState extends State<MainScreen> {
             Container(
               height: MediaQuery.of(context).size.height * 0.45,
               color: Colors.red,
-              child: Image.asset("assets/images/Sun-cloud-angled-rain.svg"),
+              child: Image(
+                image: Svg("assets/images/Sun-cloud-angled-rain.svg"),
+              ),
             ),
             Expanded(
               child: ListView(
